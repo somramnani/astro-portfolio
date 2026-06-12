@@ -25,24 +25,5 @@ Portfolio site built with Astro, Three.js, and Tailwind CSS.
 
 ![Lighthouse Score](public/Lighthouse-score.png)
 
-## 🚀 Getting Started
 
-Clone the repo:
-
-```bash
-git clone https://github.com/somramnani/next-portfolio
-cd next-portfolio
-```
-
-Install dependencies
-
-```bash
-npm install
-```
-
-Start the development server
-
-```bash
-npm run dev
-```
 
