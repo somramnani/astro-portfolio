@@ -32,7 +32,12 @@ body {
     var(--paper);
   color: var(--ink);
   font-family:
-    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
     sans-serif;
 }
 
@@ -132,25 +137,316 @@ canvas {
 
 .nav-link {
   position: relative;
+  border-radius: 8px;
+  padding: 0.35rem 0.45rem;
   text-decoration: none;
+  transition:
+    background 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
 }
 
 .nav-link::after {
   position: absolute;
-  right: 0;
+  right: 0.45rem;
   bottom: -6px;
-  left: 0;
+  left: 0.45rem;
   height: 2px;
   background: var(--coral);
   content: "";
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 180ms ease;
+  transition:
+    opacity 180ms ease,
+    transform 180ms ease;
+  opacity: 0;
+}
+
+.nav-link:hover,
+.nav-link:focus-visible,
+.nav-link-active {
+  background: rgba(232, 93, 69, 0.1);
+  color: var(--ink);
+  transform: translateY(-1px);
 }
 
 .nav-link:hover::after,
-.nav-link:focus-visible::after {
+.nav-link:focus-visible::after,
+.nav-link-active::after {
+  opacity: 1;
   transform: scaleX(1);
+}
+
+.nav-link-active {
+  animation: nav-link-active-pop 280ms ease both;
+}
+
+.social-links {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.social-icon-link {
+  display: inline-grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border: 1px solid rgba(21, 21, 21, 0.16);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--ink);
+  box-shadow: 0 8px 20px rgba(21, 21, 21, 0.08);
+  text-decoration: none;
+  transition:
+    border-color 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease,
+    transform 180ms ease;
+}
+
+.social-icon-link svg {
+  width: 1.08rem;
+  height: 1.08rem;
+  fill: currentColor;
+}
+
+.social-icon-link:hover,
+.social-icon-link:focus-visible {
+  border-color: var(--coral);
+  background: rgba(232, 93, 69, 0.1);
+  box-shadow: 0 10px 24px rgba(232, 93, 69, 0.13);
+  color: var(--teal);
+  transform: translateY(-2px);
+}
+
+@keyframes nav-link-active-pop {
+  0% {
+    transform: translateY(0);
+  }
+
+  55% {
+    transform: translateY(-3px);
+  }
+
+  100% {
+    transform: translateY(-1px);
+  }
+}
+
+.mobile-section-menu {
+  position: relative;
+  width: min(34vw, 10.5rem);
+  min-width: 0;
+  transform: translateX(0.5rem);
+}
+
+.mobile-section-indicator {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(21, 21, 21, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 10px 24px rgba(21, 21, 21, 0.08);
+  padding: 0.55rem 0.68rem 0.52rem;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+}
+
+.mobile-section-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.45rem;
+}
+
+.mobile-section-chevron {
+  position: relative;
+  z-index: 1;
+  width: 0.48rem;
+  height: 0.48rem;
+  flex: 0 0 auto;
+  border-right: 2px solid var(--ink);
+  border-bottom: 2px solid var(--ink);
+  transform: translateY(-0.12rem) rotate(45deg);
+  transition: transform 180ms ease;
+}
+
+.mobile-section-menu-open .mobile-section-chevron {
+  transform: translateY(0.12rem) rotate(225deg);
+}
+
+.mobile-section-dropdown {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 60;
+  display: grid;
+  width: min(72vw, 12rem);
+  overflow: hidden;
+  border: 1px solid rgba(21, 21, 21, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 42px rgba(21, 21, 21, 0.16);
+  padding: 0.35rem;
+  animation: mobile-section-dropdown-enter 160ms ease both;
+}
+
+.mobile-section-dropdown[hidden] {
+  display: none;
+}
+
+.mobile-section-option {
+  border-radius: 6px;
+  padding: 0.68rem 0.72rem;
+  font-size: 0.92rem;
+  font-weight: 900;
+  line-height: 1;
+  text-decoration: none;
+  transition:
+    background 160ms ease,
+    color 160ms ease,
+    transform 160ms ease;
+}
+
+.mobile-section-option:hover,
+.mobile-section-option:focus-visible,
+.mobile-section-option-active {
+  background: rgba(232, 93, 69, 0.12);
+  color: var(--ink);
+  transform: translateX(2px);
+}
+
+.mobile-section-kicker,
+.mobile-section-label {
+  position: relative;
+  z-index: 1;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-section-kicker {
+  color: var(--muted);
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.mobile-section-label {
+  margin-top: 0.15rem;
+  font-size: 0.96rem;
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.mobile-section-label--swap {
+  animation: mobile-section-label-enter 340ms ease both;
+}
+
+.mobile-section-progress {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--coral), var(--teal));
+  transform: scaleX(calc(var(--section-progress, 20%) / 100%));
+  transform-origin: left;
+  transition: transform 260ms ease;
+}
+
+@keyframes mobile-section-label-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(0.72rem);
+  }
+
+  65% {
+    opacity: 1;
+    transform: translateY(-0.08rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobile-section-dropdown-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(-0.35rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .social-links {
+    gap: 0.5rem;
+  }
+
+  .social-icon-link svg {
+    width: 1.16rem;
+    height: 1.16rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .page-shell {
+    width: min(100% - 12px, 1120px);
+  }
+
+  .mobile-section-menu {
+    width: min(30vw, 7.2rem);
+  }
+
+  .social-links {
+    gap: 0.18rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .mobile-section-kicker {
+    display: none;
+  }
+
+  .mobile-section-label {
+    margin-top: 0;
+  }
+
+  .social-icon-link {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .social-icon-link svg {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .social-icon-link:hover,
+  .social-icon-link:focus-visible {
+    border-color: transparent;
+    background: transparent;
+    box-shadow: none;
+    color: var(--teal);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
