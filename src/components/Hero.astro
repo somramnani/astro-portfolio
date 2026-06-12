@@ -1,0 +1,35 @@
+---
+import ThreeHero from "./ThreeHero.astro";
+import { profile } from "../data/portfolio";
+---
+
+<section id="home" class="relative min-h-screen overflow-hidden pt-16">
+  <ThreeHero />
+  <div class="page-shell relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-12 py-16 lg:grid-cols-[1.03fr_0.97fr]">
+    <div class="max-w-3xl">
+      <p class="eyebrow">Front End Developer</p>
+      <h1 class="mt-4 text-[clamp(3.35rem,10vw,8.5rem)] font-black leading-[0.86] tracking-normal">
+        Som Ramnani
+      </h1>
+      <p class="mt-7 max-w-2xl text-lg leading-8 text-[#3f3d39] md:text-xl">
+        I build polished, responsive web experiences with a focus on clean interfaces, practical problem solving,
+        and front-end systems that feel good to use.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <a class="button button-primary" href="#projects">View Projects</a>
+        <a class="button button-secondary" href={`mailto:${profile.email}`}>Contact Me</a>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-[420px] lg:justify-self-end">
+      <div class="absolute -inset-3 rotate-2 rounded-lg border border-black/20 bg-white/35"></div>
+      <img
+        class="relative aspect-[4/5] w-full rounded-lg border border-black/10 object-cover shadow-[12px_12px_0_rgba(21,21,21,0.14)]"
+        src="/meAndDogArtsy2.png"
+        alt="Illustrated portrait of Som"
+        width="640"
+        height="800"
+      />
+    </div>
+  </div>
+</section>

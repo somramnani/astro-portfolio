@@ -1,0 +1,22 @@
+---
+import "../styles/global.css";
+
+const {
+  title = "Som Ramnani | Front End Developer",
+  description = "Front end developer portfolio for Som Ramnani, featuring selected projects, skills, and contact links.",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

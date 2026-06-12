@@ -1,0 +1,35 @@
+---
+import { profile } from "../data/portfolio";
+
+const contactLinks = [
+  { label: "Email", href: `mailto:${profile.email}`, external: false },
+  { label: "GitHub", href: profile.github, external: true },
+  { label: "LinkedIn", href: profile.linkedin, external: true },
+  { label: "Resume", href: profile.resume, external: true },
+];
+---
+
+<section id="contact" class="section">
+  <div class="page-shell grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-end">
+    <div>
+      <p class="section-kicker">Contact</p>
+      <h2 class="section-title">Let's build something sharp.</h2>
+      <p class="mt-6 max-w-2xl text-lg leading-8 text-[#45423d]">
+        Have a question, project, role, or idea worth exploring? Send me a note and I will get back to you.
+      </p>
+    </div>
+
+    <div class="grid gap-3 sm:grid-cols-2">
+      {contactLinks.map((link) => (
+        <a
+          class="button button-secondary w-full"
+          href={link.href}
+          target={link.external ? "_blank" : undefined}
+          rel={link.external ? "noreferrer" : undefined}
+        >
+          {link.label}
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

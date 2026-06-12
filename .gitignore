@@ -13,6 +13,10 @@
 /.next/
 /out/
 
+# astro
+/.astro/
+/dist/
+
 # production
 /build
 
@@ -42,4 +46,3 @@ notes.html
 
 # pages
 /src/app/portfolio/page-old.jsx
-
