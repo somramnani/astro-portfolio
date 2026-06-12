@@ -6,7 +6,6 @@
 
 Portfolio site built with Astro, Three.js, and Tailwind CSS. Visit here: https://www.somramnani.com
 
-![Homepage](public/homepage.png)
 
 ## 🛠️ Technologies
 - Astro
