@@ -4,7 +4,7 @@
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=threedotjs&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
 
-Portfolio site built with Astro, Three.js, and Tailwind CSS. Visit here: https://www.somramnani.com
+Portfolio site built with Astro, Three.js, and Tailwind CSS. 
 
 
 ## 🛠️ Technologies
@@ -46,4 +46,3 @@ Start the development server
 npm run dev
 ```
 
-Visit: http://localhost:3000
