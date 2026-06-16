@@ -4,7 +4,7 @@ export const profile = {
   email: "som.ramnani@gmail.com",
   github: "https://github.com/somramnani",
   linkedin: "https://www.linkedin.com/in/som-ramnani-b1990b14b/",
-  resume: "https://somramnani2025resume.tiiny.site",
+  resume: "/resume.pdf",
 };
 
 export const skills = [
@@ -76,7 +76,7 @@ export const projects = [
     title: "Date Night",
     description:
       "A web app that helps people search for multiple date-night activities in a given location.",
-    image: "/DateNight.png",
+    image: "/images/DateNight.png",
     liveUrl: "https://date-night-2-456a8b6a285c.herokuapp.com",
     githubUrl: "https://github.com/somramnani/date-night-v2",
     tech: [
@@ -95,7 +95,7 @@ export const projects = [
     title: "Restaurant Manager",
     description:
       "An application where managers can track employees and manage reservations.",
-    image: "/restaurant-employees.jpg",
+    image: "/images/restaurant-employees.jpg",
     liveUrl: "https://manager-restaurant-4129383b2be4.herokuapp.com",
     githubUrl: "https://github.com/somramnani/RestaurantManager",
     tech: [
@@ -114,7 +114,7 @@ export const projects = [
     title: "Store",
     description:
       "A React, TypeScript, and Vite store app that renders products from JSON and supports a shopping cart flow.",
-    image: "/store.png",
+    image: "/images/store.png",
     liveUrl: "https://store-dusky-omega.vercel.app/",
     githubUrl: "https://github.com/somramnani/store",
     tech: [techBadges.React],
@@ -123,7 +123,7 @@ export const projects = [
     title: "2D Fighting Game",
     description:
       "A two-player fighting game built with vanilla JavaScript and CSS, featuring a classic arena combat system.",
-    image: "/fighting-game-demo.png",
+    image: "/images/fighting-game-demo.png",
     liveUrl: "https://fighting-game-psi.vercel.app",
     githubUrl: "https://github.com/somramnani/2d-fighting-game",
     tech: [techBadges.HTML5, techBadges.CSS3, techBadges.JavaScript],
