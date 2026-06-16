@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": [
+        "./src/*"
+      ]
     }
-  }
+  },
+  "include": [
+    "./worker-configuration.d.ts"
+  ]
 }
