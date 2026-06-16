@@ -23,7 +23,7 @@ Portfolio site built with Astro, Three.js, and Tailwind CSS.
 
 ## 🎯 Lighthouse Score
 
-![Lighthouse Score](public/Lighthouse-score.png)
+![Lighthouse Score](public/images/Lighthouse-score.png)
 
 ## 🚀 Getting Started
 
@@ -45,4 +45,3 @@ Start the development server
 ```bash
 npm run dev
 ```
-
