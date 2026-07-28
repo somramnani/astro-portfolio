@@ -1,11 +1,14 @@
-  const sectionIds = [
+  import { siteFeatures } from "../../../config/site";
+
+  type SectionId = "home" | "about" | "experience" | "projects" | "contact";
+
+  const sectionIds: readonly SectionId[] = [
     "home",
     "about",
     "experience",
-    "projects",
+    ...(siteFeatures.showProjects ? (["projects"] as const) : []),
     "contact",
-  ] as const;
-  type SectionId = (typeof sectionIds)[number];
+  ];
 
   const isSectionId = (sectionId: string): sectionId is SectionId => {
     return sectionIds.includes(sectionId as SectionId);
