@@ -1,11 +1,12 @@
 ---
 import { profile } from "../../../data/portfolio";
+import { siteFeatures } from "../../../config/site";
 
 const links = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
+  ...(siteFeatures.showProjects ? [{ href: "#projects", label: "Projects" }] : []),
   { href: "#contact", label: "Contact" },
 ];
 

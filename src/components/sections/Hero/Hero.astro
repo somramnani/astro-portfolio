@@ -1,6 +1,11 @@
 ---
 import HeroBackground from "./HeroBackground.astro";
 import { profile } from "../../../data/portfolio";
+import { siteFeatures } from "../../../config/site";
+
+const primaryCta = siteFeatures.showProjects
+  ? { href: "#projects", label: "View Projects" }
+  : { href: "#experience", label: "View Experience" };
 ---
 
 <section id="home" class="relative min-h-screen overflow-hidden pt-16">
@@ -16,7 +21,7 @@ import { profile } from "../../../data/portfolio";
         and front-end systems that feel good to use.
       </p>
       <div class="mt-9 flex flex-wrap gap-3">
-        <a class="button button-primary" href="#projects">View Projects</a>
+        <a class="button button-primary" href={primaryCta.href}>{primaryCta.label}</a>
         <a class="button button-secondary" href={`mailto:${profile.email}`}>Contact Me</a>
       </div>
     </div>
