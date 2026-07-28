@@ -4,7 +4,7 @@ const reduceMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
 const canvas = document.querySelector("#hero-canvas");
-const wrapper = canvas?.closest<HTMLElement>(".three-hero");
+const wrapper = canvas?.closest<HTMLElement>(".hero-background");
 
 if (canvas instanceof HTMLCanvasElement && wrapper) {
   const scene = new THREE.Scene();

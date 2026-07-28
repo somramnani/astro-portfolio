@@ -1,4 +1,10 @@
-  const sectionIds = ["home", "about", "experience", "projects", "contact"] as const;
+  const sectionIds = [
+    "home",
+    "about",
+    "experience",
+    "projects",
+    "contact",
+  ] as const;
   type SectionId = (typeof sectionIds)[number];
 
   const isSectionId = (sectionId: string): sectionId is SectionId => {
