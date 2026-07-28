@@ -1,6 +1,4 @@
-const experienceSection = document.querySelector<HTMLElement>(
-  "[data-experience-section]",
-);
+const experienceSection = document.querySelector<HTMLElement>("[data-experience-section]");
 const experienceEntries = Array.from(
   document.querySelectorAll<HTMLElement>("[data-experience-entry]"),
 );

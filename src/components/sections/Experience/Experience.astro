@@ -1,14 +1,15 @@
 ---
-import { experiences } from "../../data/portfolio";
+import SectionHeading from "../../ui/SectionHeading.astro";
+import { experiences } from "../../../data/portfolio";
 ---
 
 <section id="experience" class="section" data-experience-section>
   <div class="page-shell">
     <div class="section-heading">
-      <div>
-        <p class="section-kicker">Experience</p>
-        <h2 class="section-title">Recent work across product teams and community codebases.</h2>
-      </div>
+      <SectionHeading
+        kicker="Experience"
+        title="Recent work across product teams and community codebases."
+      />
     </div>
 
     <ol class="experience-timeline" aria-label="Professional experience timeline">
