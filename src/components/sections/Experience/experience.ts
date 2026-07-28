@@ -26,10 +26,10 @@ if (
   const entryObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("experience-entry-visible");
-          entryObserver.unobserve(entry.target);
-        }
+        entry.target.classList.toggle(
+          "experience-entry-visible",
+          entry.isIntersecting,
+        );
       });
     },
     {
