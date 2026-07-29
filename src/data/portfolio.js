@@ -30,7 +30,7 @@ export const skills = [
 
 export const experiences = [
   {
-    company: "EduTrend",
+    company: "My Behavior Bridge",
     role: "Software Engineer Intern",
     dates: "Nov 2025 - Present",
     location: "",

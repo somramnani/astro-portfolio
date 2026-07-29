@@ -14,7 +14,6 @@ const socialLinks = [
   { href: profile.github, label: "GitHub", icon: "github", external: true },
   { href: profile.resume, label: "Resume", icon: "resume", external: true },
   { href: profile.linkedin, label: "LinkedIn", icon: "linkedin", external: true },
-  { href: `mailto:${profile.email}`, label: "Email", icon: "email", external: false },
 ];
 ---
 
@@ -87,13 +86,21 @@ const socialLinks = [
             </svg>
           )}
 
-          {link.icon === "email" && (
-            <svg aria-hidden="true" viewBox="0 0 24 24">
-              <path d="M2.75 4h18.5A2.75 2.75 0 0 1 24 6.75v10.5A2.75 2.75 0 0 1 21.25 20H2.75A2.75 2.75 0 0 1 0 17.25V6.75A2.75 2.75 0 0 1 2.75 4Zm-.5 3.17v10.08c0 .28.22.5.5.5h18.5c.28 0 .5-.22.5-.5V7.17l-8.18 6.13a2.62 2.62 0 0 1-3.14 0L2.25 7.17Zm18.05-.92H3.7l8.08 6.06c.13.1.31.1.44 0l8.08-6.06Z" />
-            </svg>
-          )}
         </a>
       ))}
+      <button
+        class="social-icon-link"
+        type="button"
+        aria-label="Copy email address"
+        title="Copy email address"
+        data-copy-email={profile.email}
+        data-default-label="Copy email address"
+        data-success-label="Email copied"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M2.75 4h18.5A2.75 2.75 0 0 1 24 6.75v10.5A2.75 2.75 0 0 1 21.25 20H2.75A2.75 2.75 0 0 1 0 17.25V6.75A2.75 2.75 0 0 1 2.75 4Zm-.5 3.17v10.08c0 .28.22.5.5.5h18.5c.28 0 .5-.22.5-.5V7.17l-8.18 6.13a2.62 2.62 0 0 1-3.14 0L2.25 7.17Zm18.05-.92H3.7l8.08 6.06c.13.1.31.1.44 0l8.08-6.06Z" />
+        </svg>
+      </button>
     </div>
   </nav>
 </header>
