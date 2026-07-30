@@ -1,9 +1,14 @@
 ---
 import "../styles/global.css";
+import { siteFeatures } from "../config/site";
+
+const defaultDescription = siteFeatures.showProjects
+  ? "Front end developer portfolio for Som Ramnani, featuring selected projects, experience, skills, and contact links."
+  : "Front end developer portfolio for Som Ramnani, featuring experience, skills, and contact links.";
 
 const {
   title = "Som Ramnani | Front End Developer",
-  description = "Front end developer portfolio for Som Ramnani, featuring selected projects, skills, and contact links.",
+  description = defaultDescription,
 } = Astro.props;
 ---
 
@@ -18,5 +23,8 @@ const {
   </head>
   <body>
     <slot />
+    <div class="email-copy-toast" role="status" aria-live="polite" aria-atomic="true" data-email-copy-status></div>
+
+    <script src="../scripts/copy-email.js"></script>
   </body>
 </html>

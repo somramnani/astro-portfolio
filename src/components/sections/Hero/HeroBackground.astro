@@ -1,0 +1,29 @@
+<div class="hero-background" aria-hidden="true">
+  <canvas id="hero-canvas"></canvas>
+</div>
+
+<script src="./scene.ts"></script>
+
+<style>
+  .hero-background {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: auto;
+  }
+
+  .hero-background::after {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(90deg, rgba(248, 245, 239, 0.18), rgba(248, 245, 239, 0.8) 74%),
+      radial-gradient(circle at 74% 46%, transparent 0 18%, rgba(248, 245, 239, 0.38) 54%);
+    content: "";
+    pointer-events: none;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+  }
+</style>

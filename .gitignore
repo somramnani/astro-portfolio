@@ -17,6 +17,9 @@
 /.astro/
 /dist/
 
+# wrangler local state
+.wrangler/
+
 # production
 /build
 

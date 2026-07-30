@@ -1,9 +1,11 @@
+---
+import SectionHeading from "../../ui/SectionHeading.astro";
+import { skills } from "../../../data/portfolio";
+---
+
 <section id="about" class="section border-y border-black/10 bg-white/50">
   <div class="page-shell grid gap-10 lg:grid-cols-[0.75fr_1.25fr]">
-    <div>
-      <p class="section-kicker">About</p>
-      <h2 class="section-title">Curious builder, steady teammate.</h2>
-    </div>
+    <SectionHeading kicker="About" title="Curious builder, steady teammate." />
     <div class="grid gap-6 text-lg leading-8 text-[#45423d]">
       <p>
         Since childhood, my fascination with technology has pushed me to keep expanding my skills across languages,
@@ -14,6 +16,13 @@
         My work centers on JavaScript, React, HTML, and CSS, with a practical eye for interfaces that are clear,
         responsive, and maintainable. Away from code, I am usually snowboarding, cooking, or playing basketball.
       </p>
+      <div class="flex flex-wrap gap-3 pt-2" aria-label="Technical skills">
+        {skills.map((skill) => (
+          <span class="rounded-lg border border-black/15 bg-white px-3.5 py-2.5 text-sm font-extrabold leading-none shadow-sm">
+            {skill}
+          </span>
+        ))}
+      </div>
     </div>
   </div>
 </section>

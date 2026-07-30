@@ -11,7 +11,6 @@ Portfolio site built with Astro, Three.js, and Tailwind CSS.
 - Astro
 - Three.js
 - Tailwind CSS
-- Vercel
 
 ## ✨ Features
 
@@ -21,9 +20,7 @@ Portfolio site built with Astro, Three.js, and Tailwind CSS.
 - Responsive layout for mobile and desktop
 - Project showcase section
 
-## 🎯 Lighthouse Score
 
-![Lighthouse Score](public/images/Lighthouse-score.png)
 
 
 

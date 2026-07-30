@@ -28,6 +28,43 @@ export const skills = [
   "Material UI",
 ];
 
+export const experiences = [
+  {
+    company: "My Behavior Bridge",
+    role: "Software Engineer Intern",
+    dates: "Nov 2025 - Present",
+    location: "",
+    highlights: [
+      "Built and maintained a cross-platform React Native component library in TypeScript, creating reusable UI components that standardized design patterns and improved development efficiency.",
+      "Authored and maintained developer documentation for 20+ UI components, improving onboarding and enabling faster adoption of the internal design system.",
+      "Implemented GraphQL mutation workflows for dynamic form submissions, connecting configurable React Native input schemas to backend operations and reducing duplicate submission logic across 10+ data-entry features.",
+    ],
+  },
+  {
+    company: "One Community Global",
+    role: "Volunteer Software Engineer",
+    dates: "Sept 2025 - Present",
+    location: "",
+    highlights: [
+      "Reviewed and tested 20+ GitHub pull requests across community portal features, validating functionality, edge cases, accessibility, and alignment with project requirements.",
+      "Developed responsive frontend features using React, JavaScript, HTML, CSS, and CSS Modules, improving usability, readability, and layout consistency across user-facing pages.",
+      "Debugged and refactored React components by resolving pagination, filtering, rendering, dark mode, and layout issues, improving maintainability and reducing user-facing UI bugs.",
+    ],
+  },
+  {
+    company: "Trendsetter Media & Marketing",
+    role: "Software Engineer Intern",
+    dates: "May - Nov 2021",
+    location: "Freehold, NJ",
+    highlights: [
+      "Delivered 6+ features in agile sprints using React, Next.js, TypeScript, Node.js, PostgreSQL, and SQL, collaborating through Git and GitHub.",
+      "Engineered a reusable Snackbar system with React Context and custom hooks, reducing repeated notification logic and improving consistency across authenticated user flows.",
+      "Developed and documented a Storybook component library with 20+ components, improving component reuse and frontend development speed.",
+      "Increased test coverage by 5% and helped prevent regressions by adding automated tests with Cypress, Jest, Mocha, React Testing Library, and GitHub Actions CI/CD.",
+    ],
+  },
+];
+
 export const techBadges = {
   HTML5: {
     name: "HTML5",

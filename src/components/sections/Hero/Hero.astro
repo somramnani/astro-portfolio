@@ -1,23 +1,28 @@
 ---
-import ThreeHero from "./ThreeHero.astro";
-import { profile } from "../data/portfolio";
+import HeroBackground from "./HeroBackground.astro";
+import { profile } from "../../../data/portfolio";
+import { siteFeatures } from "../../../config/site";
+
+const primaryCta = siteFeatures.showProjects
+  ? { href: "#projects", label: "View Projects" }
+  : { href: "#experience", label: "View Experience" };
 ---
 
 <section id="home" class="relative min-h-screen overflow-hidden pt-16">
-  <ThreeHero />
+  <HeroBackground />
   <div class="page-shell relative z-10 grid min-h-[calc(100vh-4rem)] items-center gap-12 py-16 lg:grid-cols-[1.03fr_0.97fr]">
     <div class="max-w-3xl">
-      <p class="eyebrow">Front End Developer</p>
+      <p class="eyebrow">{profile.role}</p>
       <h1 class="mt-4 text-[clamp(3.35rem,10vw,8.5rem)] font-black leading-[0.86] tracking-normal">
-        Som Ramnani
+        {profile.name}
       </h1>
       <p class="mt-7 max-w-2xl text-lg leading-8 text-[#3f3d39] md:text-xl">
         I build polished, responsive web experiences with a focus on clean interfaces, practical problem solving,
         and front-end systems that feel good to use.
       </p>
       <div class="mt-9 flex flex-wrap gap-3">
-        <a class="button button-primary" href="#projects">View Projects</a>
-        <a class="button button-secondary" href={`mailto:${profile.email}`}>Contact Me</a>
+        <a class="button button-primary" href={primaryCta.href}>{primaryCta.label}</a>
+        <a class="button button-secondary" href="#contact">Contact Me</a>
       </div>
     </div>
 

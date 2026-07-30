@@ -1,0 +1,51 @@
+---
+import SectionHeading from "../../ui/SectionHeading.astro";
+import { experiences } from "../../../data/portfolio";
+---
+
+<section id="experience" class="section" data-experience-section>
+  <div class="page-shell">
+    <div class="section-heading">
+      <SectionHeading
+        kicker="Experience"
+        title="Recent work across product teams and community codebases."
+      />
+    </div>
+
+    <ol class="experience-timeline" aria-label="Professional experience timeline">
+      {experiences.map((experience, index) => {
+        const isRightSide = index % 2 === 1;
+
+        return (
+          <li
+            class={`experience-entry ${isRightSide ? "experience-entry-right" : "experience-entry-left"}`}
+            data-experience-entry
+          >
+            <article class="experience-card">
+              <div>
+                <p class="eyebrow">{experience.dates}</p>
+                <h3 class="mt-2 text-2xl font-black leading-tight md:text-3xl">{experience.role}</h3>
+                <p class="mt-2 text-base font-extrabold text-[#45423d]">
+                  {experience.company}
+                  {experience.location && <span class="font-bold text-[#62615e]"> | {experience.location}</span>}
+                </p>
+              </div>
+
+              <ul class="grid gap-3 text-sm leading-6 text-[#45423d] md:text-base">
+                {experience.highlights.map((highlight) => (
+                  <li class="experience-highlight">{highlight}</li>
+                ))}
+              </ul>
+            </article>
+
+            <div class="experience-marker" aria-hidden="true">
+              <span></span>
+            </div>
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</section>
+
+<script src="./experience.ts"></script>

@@ -1,14 +1,16 @@
 ---
-import { projects } from "../data/portfolio";
+import SectionHeading from "../../ui/SectionHeading.astro";
+import { projects } from "../../../data/portfolio";
 ---
 
 <section id="projects" class="section bg-[#151515] text-white">
   <div class="page-shell">
     <div class="section-heading">
-      <div>
-        <p class="section-kicker text-[#ffb199]">Projects</p>
-        <h2 class="section-title">Selected work with real product shape.</h2>
-      </div>
+      <SectionHeading
+        kicker="Projects"
+        title="Selected work with real product shape."
+        kickerClass="text-[#ffb199]"
+      />
     </div>
 
     <div class="grid gap-5">
