@@ -32,12 +32,13 @@ export const experiences = [
   {
     company: "My Behavior Bridge",
     role: "Software Engineer Intern",
-    dates: "Nov 2025 - Present",
+    dates: "Nov 2025 - Sept 2026",
     location: "",
     highlights: [
-      "Built and maintained a cross-platform React Native component library in TypeScript, creating reusable UI components that standardized design patterns and improved development efficiency.",
+      "Built and maintained a cross-platform React Native component library in TypeScript, creating reusable UI components that standardized design patterns and improved development efficiency",
       "Authored and maintained developer documentation for 20+ UI components, improving onboarding and enabling faster adoption of the internal design system.",
       "Implemented GraphQL mutation workflows for dynamic form submissions, connecting configurable React Native input schemas to backend operations and reducing duplicate submission logic across 10+ data-entry features.",
+      "Developed and deployed a responsive marketing website with Astro and TypeScript, using reusable components, accessibility-conscious UI patterns, and automated unit and end-to-end testing",
     ],
   },
   {
